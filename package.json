@@ -1,0 +1,49 @@
+{
+  "name": "@pipelink/sdk",
+  "version": "1.0.0",
+  "description": "Production-grade TypeScript SDK for PIPELINK Solana infrastructure protocol",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "type-check": "tsc --noEmit",
+    "lint": "echo 'Add eslint when needed'",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "solana",
+    "web3",
+    "sdk",
+    "typescript",
+    "pipelink",
+    "infrastructure"
+  ],
+  "author": "PIPELINK Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4",
+    "@vitest/ui": "^1.0.4",
+    "@vitest/coverage-v8": "^1.0.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
